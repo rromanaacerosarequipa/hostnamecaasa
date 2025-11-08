@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
 
-# 👉 Función para cargar animación desde una URL
+# Animación desde una URL
 def load_lottieurl(url):
     response = requests.get(url)
     if response.status_code != 200:
@@ -158,3 +158,4 @@ if st.button("Ejecutar"):
 with st.container():
     st.markdown('<div class="robot-float"></div>', unsafe_allow_html=True)
     st_lottie(robot, height=350, key="robot-float", speed=1, loop=True)
+
